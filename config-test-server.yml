@@ -13,3 +13,5 @@
 
   - name: deploy insureme application
     command: sudo docker run -itd -p 8081:8081 --name insureti raksha07/project:1.0
+
+    
