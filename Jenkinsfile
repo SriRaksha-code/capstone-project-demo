@@ -19,8 +19,8 @@ node{
         }
     }
     
-    stage('deploy to test-environment') {
-        ansiblePlaybook become: true, credentialsId: 'ansible-ssh-jenkins-key', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'configure-test-server.yml'
+    stage('deploy') {
+        ansiblePlaybook become: true, credentialsId: 'ansible-ssh-jenkins-key', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'config-test-server.yml'
     }
 
 }
